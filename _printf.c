@@ -9,15 +9,13 @@
  */
 int _printf(const char *format, ...)
 {
-	int x = 0;
+int x = 0;
+const char *ptr = format;
 
-if (format == NULL)
+if (ptr == NULL)
 return (-1);
-if (format == "%s")
-printf("%s", format);
-if (format == "%c")
-printf("%c", format);
-x = strlen(format);
+printf("%s", ptr);
+x = strlen(ptr);
 printf("%d", x);
 return (x);
 }
